@@ -1,0 +1,80 @@
+/* button,
+a.button,
+input[type='submit'],
+input[type='reset'] {
+  background-color: darkblue;
+  color: white;
+  border: 1px solid darkblue;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  font-size: 16px;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+button:hover,
+a.button:hover,
+input[type='submit']:hover,
+input[type='reset']:hover {
+  background-color: blue;
+  border-color: blue;
+} */
+
+/* is() → utilizado para um grupo específico de tipos de elementos: */
+
+:is(button, a.button, input[type='submit'], input[type='reset']) {
+  background-color: darkblue;
+  color: white;
+  border: 1px solid darkblue;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  font-size: 16px;
+  text-align: center;
+  font-size: 1.6em;
+}
+
+:is(button, a.button, input[type='submit'], input[type='reset']):hover {
+  background-color: blue;
+  border-color: blue;
+}
+
+:where(h1, h2, h3) {
+  margin: 0;
+  padding: 0;
+}
+
+/* estiliza o elemento pai com base no filho */
+
+article:has(h2) {
+  border: 5px solid hotpink;
+}
+
+article:has(h3) {
+  margin-top: 20px;
+  border: 5px dashed yellowgreen;
+}
+
+.btn{
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  color: white;
+}
+
+.btn.primary {
+  background-color: deepskyblue;
+}
+
+.btn:not(.primary) {
+  background-color: grey;
+}

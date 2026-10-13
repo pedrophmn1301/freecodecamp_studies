@@ -1,0 +1,10 @@
+
+Função calc();
+
+→calc(argumentos): definir valores dinamicamente.
+Funciona como uma função em JavaScript.
+
+os argumentos pode ser: comprimento, ângulo, tempo, porcentagens, números e cores. 
+Também aceita medidas como px, em e %;
+pode utilizar operadores (+-*/)
+

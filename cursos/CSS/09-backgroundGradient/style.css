@@ -1,0 +1,34 @@
+
+*{
+    outline: 5px black solid;
+}
+
+
+.linear-gradient{
+
+    /*      linha reta:
+    
+    background: linear-gradient(direção, cor-para1, cor-parada2); 
+    
+    */
+
+    background: linear-gradient(to right, red, yellow);
+    height: 40vh;
+
+    margin-bottom: 100px;
+
+}
+
+.radial-gradient{
+
+    /*      linha radial
+    
+    background: radial-gradient(forma tamanho na posição, parada-de-cor1, parada-de-cor2, ...)
+    
+    */
+
+    background: radial-gradient(circle closest-side at center, red, yellow 50%, green 80%);
+    
+    height: 40vh;
+
+}

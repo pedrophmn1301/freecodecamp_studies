@@ -1,0 +1,48 @@
+
+Unidades absolutas têm comprimento fixo e não são relativas a NADA.
+
+Unidade absoluta mais comum: 
+→Pixels: 1px = 1/96 de polegada
+O pixel é utilizado para um controle preciso de dimensão, espaçamento ou layout
+
+Outras unidades de medida (utilizadas mais para impressõres, não para telas):
+
+A unidade in (polegadas), que equivale a 96px;
+A unidade cm (centímetros), que equivale a 25,2/64 de polegada;
+A unidade mm (milímetros), que equivale a 1/10 de centímetro;
+A unidade q (quartos de milímetro), que equivale a 1/40 de centímetro;
+A unidade pc (picas), que equivale a 1/6 de polegada;
+A unidade pt (pontos), que equivale a 1/72 de polegada.
+
+
+→Porcentagens: são unidades sempre relativas que permitem definir tamanhos, dimensões e outras propriedades como uma proporção do elemento pai.
+Ao usar um valor percentual, você está essencialmente dizendo: "Faça com que este elemento ocupe X% do seu contêiner".
+Usado para criar responsividade.
+
+.parent {
+  width: 100%;
+  height: 300px;
+  background-color: lightblue;
+}
+
+.child {
+  width: 80%;
+  height: 100%;
+  background-color: red;
+}
+
+Usando →Porcentagens em imagens flexíveis permite o redimensionamnto em telas menores, mantendo sua proporção:
+
+max-width: 100%
+
+Porcentagens também pode ser utilizada em fontes:
+
+.text-container {
+  font-size: 16px;
+}
+
+.text {
+  font-size: 120%;
+}
+
+Esse exemplo torna o texto do elemento filho 20% maior que o do elemento pai

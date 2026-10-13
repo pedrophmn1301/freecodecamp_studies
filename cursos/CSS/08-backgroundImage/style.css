@@ -1,0 +1,25 @@
+
+body{
+    /* background-image:url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+
+    background-size: contain;
+
+    min-height: 100px;
+
+    background-repeat: no-repeat; /*para a imagem não se repetir*/
+
+    /* 
+    background-repeat: repeat-x; → se repetir verticalmente
+
+    background-repeat: repeat-y; → se repetir horizontalmente 
+    
+
+    background-position: center top;
+
+
+    background-attachment: fixed; 
+    
+    */
+
+    background: center top fixed no-repeat url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+}

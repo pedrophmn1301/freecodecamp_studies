@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- type: button -->
+
+    <button>Iniciar jogo</button>
+    <button type="button" id="btn">Alert</button>
+
+    <!-- type: submit -->
+    <form action="">
+        <label for="email">Email:</label>
+        <input type="email">
+        <button type="submit">Envie</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <!-- Botões com input -->
+
+    <input type="button" value="Iniciar">
+
+    <script>
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click", () => alert("Você clicou no botão!"));
+    </script>
+
+</body>
+</html>

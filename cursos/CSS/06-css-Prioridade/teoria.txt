@@ -1,0 +1,33 @@
+
+######### -PRIORIDADE- ###########
+
+Quando há conflito de formatação em uma regra css, 
+o navegador dá prioridade para o último configurado, 
+desde que esses estejam na mesma ordem de prioridade.
+
+Ordem de prioridade:
+
+1 Uso do !important
+
+2 Id
+
+3 Class
+
+4 Universal
+
+*Obs.: O uso do !important também obedece a mesma ordem de prioridade: id, Class, universal
+
+
+######### -HERANÇA- ###########
+
+Os elementos filhos herdam a mesma formatação do elemento pai. 
+Mas apenas algumas propriedades aceitam essa herança, ex.: font-family, color, line-height...
+Elementos como: margin, padding, border e background devem estar acompanhados da palavra "inherit" para serem herdadas dos pais.
+
+exemplo:
+
+<div style="color: blue; padding: 10px;">          //elemento pai
+    <p style="padding: inherit;">Este é o elemento filho</p>        //O uso do inherit fará com que o filho herde o padding do elemento pai
+</div>
+
+//    Arquivo style.css

@@ -1,0 +1,7 @@
+
+
+-Sistema Decimal: base 2 → usa apenas 0 e 1
+
+-Sistema Octal: base 8 → usa os dígitos de 0 a 7
+
+-Sistema Hexadecimal: base 16 → usa de 0 a 9 e A a F

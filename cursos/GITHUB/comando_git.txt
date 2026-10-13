@@ -1,0 +1,31 @@
+Após criado o repositório no GitHub:
+
+No VS Code, no terminal bash:
+
+-git init → cria a pasta .git e inicia o repositório
+
+-git add . → informa que a pasta atual é a pasta master
+
+-git commit -m "message" → prepara as pastas e a mensagem da publicação
+
+-git branch -M main → informa qual branch será afetada após a publicação
+
+-git remote add origin git@github.com:pedrophmn1301/freecodecamp_studies.git → destino da publicação
+
+-Criar chave ssh → ssh-keygen -t ed25519 -C "seu-email-do-github"
+
+-Inciar o agente SSH: eval "$(ssh-agent -s)"
+
+-Adicionar a chave criada: ssh-add ~/.ssh/id_ed25519
+
+-Exibir a chave púlbica: cat ~/.ssh/id_ed25519.pub
+
+-No GitHub:
+
+Settings
+SSH and GPG keys
+New SSH Key
+Cole a chave
+
+-Testar conexão ssh -T git@github.com
+

@@ -1,0 +1,12 @@
+
+Propriedades relativas ao elemento pai:
+
+em e rem
+
+→em: relativa ao tamanho da fonte do elemento pai
+
+→rem: relativa ao tamanho da fonte padrão do elemento raiz (html), que por padrão tem 16px de tamanho
+Ou seja, é a medida mais recomendada para uso em fontes, pois quando necessário, o navegador amplia sua fonte de acordo com a necessidade do usuário
+Para tamanhos de fonte é utilizada a medida rem.
+
+

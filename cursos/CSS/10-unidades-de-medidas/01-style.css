@@ -1,0 +1,14 @@
+
+/* Centralizando o elemento verticalmente: */
+
+.centered{
+    background-color: cadetblue;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-radius: 50%; /*Arredondando o quadrado  */
+    
+}

@@ -1,0 +1,46 @@
+.cta-button {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cta-button::before {
+  content: "⭐";
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  font-size: 0.75rem;
+}
+
+.cta-button::after {
+  content: '➡️';
+  position: absolute;
+  bottom: 6px;
+  font-size: 1rem;
+  transition: transform 0.5s ease;
+}
+
+
+.cta-button:hover::after {
+  transform: translateX(0.8px);
+}
+
+p::first-letter {
+  font-size: 4rem;
+}
+
+li::marker {
+  color: crimson;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+/* Estudar: 
+::placeholder, 
+::spelling-error and 
+::selection 
+*/

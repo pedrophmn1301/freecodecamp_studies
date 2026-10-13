@@ -1,0 +1,28 @@
+
+body{
+    background-color: bisque;
+}
+
+
+/* Para que a formatação inline seja sobrescrita, é necessário o uso do !important a frente do atributo */
+
+/*######### ESSA É A ORDEM DE PRECEDÊNCIA DE FORMATAÇÃO: ###############################################*/
+
+
+h1{
+    text-align: center !important; /*Sobrescreve qualquer estilo*/ 
+}
+
+#titulo{
+    margin-top: 150px;
+    color: blue;        /*1º APÓS INLINE*/
+}
+
+
+.titulo{
+    color: brown;       /*1º APÓS ID*/
+}
+
+h1{     /*seletor universal tem a menor precedência*/
+    text-align: start; 
+}

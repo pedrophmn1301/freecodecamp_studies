@@ -1,0 +1,24 @@
+
+.req{
+    outline: 2px solid orange;
+}
+
+form{
+    font-size: 30px;
+}
+
+button{
+    font-size: 20px;
+}
+
+#email:valid{
+    outline: 2px solid green;
+}
+
+#email:invalid{
+    outline: 2px solid red;
+}
+
+#address:disabled{
+    background-color: lightsteelblue;
+}

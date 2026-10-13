@@ -1,0 +1,11 @@
+body{
+    font-size: 35px;
+}
+
+
+.para{
+    font-size: 1.5rem;  /*1,5 x 16px (padrão do elemento raiz, o html)*/
+    margin: 2em;    /*2x o tamanho do elemento pai (body)*/
+    border: 2px green solid;
+    padding: 1.2em;
+}

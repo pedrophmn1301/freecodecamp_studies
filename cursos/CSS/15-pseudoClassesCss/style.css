@@ -1,0 +1,63 @@
+
+/* root é comumente utilizado para salvar variáveis */
+
+*{
+    font-size: 1.3rem;
+}
+
+:root{
+    background-color: lightcoral;
+/* --main-font: 'Arial, sans-serif';
+  --primary-color: blue; 
+  --secondary-color: green;  */
+
+}
+
+/* Configurações para itens vazios */
+
+:empty{
+    /* background-color: gray; */
+    display: none;
+}
+
+
+th,td {
+  border: 1px solid lightgray;
+  padding: 8px;
+}
+
+tr:nth-child(even){
+    background-color: orangered;
+}
+
+tr:nth-child(odd){
+    background-color: lightgreen;
+}
+
+#childs li:first-child{
+    background-color: orangered;
+}
+
+#childs li:last-child{
+    background-color: lightgreen;
+}
+
+.container div:only-child{
+    background-color: purple;
+}
+
+.types p:first-of-type{
+    background-color: azure;
+}
+
+.types p:last-of-type{
+    background-color: bisque;
+}
+
+.paragraphs p:nth-of-type(2){
+    background-color: blue;
+}
+
+p:only-of-type{
+    border: 5px black solid;
+}

@@ -1,0 +1,49 @@
+
+button{
+    font-size: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btn1:active{
+    background-color: greenyellow;
+}
+
+#btn1:hover{
+    color: blue;
+    font-weight: bolder;
+}
+
+a{
+    padding: 25px;
+    font-size: 25px;
+    display: block;
+    text-align: center;
+}
+
+a:visited{
+    color: brown;
+}
+
+#container p:first-child{
+    background-color: lightcoral;
+    padding: 10px;
+    width: 200px;
+}
+
+
+#container p:last-child{
+    background-color: burlywood;
+    padding: 10px;
+    width: 200px;
+}
+
+#btn2{
+   background-color: aliceblue;
+}
+
+#lk2:any-link{
+    color: green;
+}
+

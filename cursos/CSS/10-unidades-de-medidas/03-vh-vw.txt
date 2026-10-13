@@ -1,0 +1,15 @@
+
+
+as medidas vh e vw são relacionadas à medidas do ViewPort
+
+→ vh - viewheight: relativo à altura do ViewPort
+
+1vh = 1% da altura do ViewPort
+100vh = 100% da altura do viewport
+
+→ vw - viewWidth: relativa à largura do ViewPort
+1vw = 1% da largura do viewport
+100vw = 100% da largura do viewport
+
+
+vw e vh servem para representar responsividade de uma texto

@@ -1,0 +1,305 @@
+######## GITHUB ########
+
+→ Git Hub - Controle de versão:
+
+Resumo dos pontos principais:
+
+O problema: Salvar várias cópias manuais de um projeto com nomes caóticos para registrar alterações.
+
+A solução (Git): Um sistema de controle de versão para rastrear e gerenciar o histórico de edições.
+
+Commits: Capturas de tela (snapshots) de um estado específico do código que permitem comparar mudanças ou reverter erros.
+
+Branches (Ramos): Caminhos separados no código que permitem testar novas funcionalidades isoladamente sem quebrar o projeto principal.
+
+Colaboração e Provedores: Ferramentas como GitHub ou GitLab combinadas com o Git facilitam o trabalho em equipe e o backup na nuvem.
+
+
+######## RESUMO GITHUB E GITLAB ########
+
+→ Resumo dos pontos principais sobre GitHub e GitLab:
+
+O que são: Provedores de controle de versão baseados em nuvem que armazenam projetos em "repositórios" e facilitam a colaboração.
+
+Projetos abertos e fechados: Permitem gerenciar projetos open-source (onde qualquer um pode ver, propor mudanças e relatar problemas) ou closed-source (onde apenas pessoas autorizadas têm acesso).
+
+Colaboração facilitada: Em vez de colar código em chats ou compartilhar telas, os desenvolvedores enviam alterações para a nuvem para que outros possam revisar, baixar e testar localmente.
+
+Revisão de código (Code Review): Possibilita comentar linhas específicas, sugerir edições direto pelo navegador e mesclar recursos concluídos na branch principal.
+
+Gerenciamento de tarefas: Oferecem rastreadores de problemas (issue trackers), atribuição de tickets, recebimento de relatórios de bugs e quadros de planejamento de projetos.
+
+
+######## INSTALAR E CONFIGURAR ########
+
+→ Instalar Git
+
+Instalação: 
+
+Linux: apt-get install git ou sudo pacman -S git
+
+Windows: choco install git.install
+
+Verificar versão: git --version
+
+
+Configuração inicial:
+
+Definir nome de usuário global: git config --global user.name "Jane Doe".
+
+Definir e-mail global: git config --global user.email janedoe@example.com.
+
+Definir editor de preferência (ex: VS Code): git config --global core.editor "code --wait".
+
+Listar configurações: git config --list.
+
+
+######## REPOSITÓRIOS ########
+
+Resumo sobre repositórios e como criá-los:
+
+O que é um repositório: Um container para um projeto que agrupa todos os seus arquivos, podendo ser local (no seu computador) ou remoto (em serviços como GitHub ou GitLab).
+
+Criação no GitHub: Feita pelo site clicando no ícone de mais (+) no canto superior direito e selecionando "New Repository".
+
+Configurações principais: Escolher o proprietário, definir um nome (evitando espaços), adicionar opcionalmente uma descrição, escolher entre público ou privado, e gerar automaticamente arquivos opcionais como README, .gitignore e licença.
+
+Clonagem: Permite baixar o repositório remoto para o computador usando o botão "Code" por HTTPS ou SSH (git clone URL), seguido pelo comando cd para entrar na pasta.
+
+GitHub CLI: Ferramenta de linha de comando para gerenciar tarefas específicas do GitHub, permitindo clonar (gh repo clone) ou criar repositórios interativamente (gh repo create) sem sair do terminal.
+
+
+######## CHAVES SSH E GPG ########
+
+O que são: Pares de chaves pública e privada usados para autenticação e assinatura de commits. A chave privada fica na máquina local e a pública é compartilhada.
+
+GPG vs SSH: Chaves GPG são tipicamente usadas para assinar arquivos ou commits garantindo autenticidade e integridade, enquanto chaves SSH autenticam conexões remotas com servidores e também podem assinar commits.
+
+Geração de chaves:
+
+GPG: gpg --full-generate-key.
+
+SSH: ssh-keygen -t ed25519 -C "your_email@example.com".
+
+Assinatura de Commits:
+
+É necessário enviar a chave pública para a conta do GitHub.
+
+Commits assinados recebem um selo (badge) de verificação especial no GitHub.
+
+
+Encontrar chaves públicas: As chaves SSH ficam na pasta ~/.ssh (terminadas em .pub). Para chaves GPG, liste as chaves e exporte a pública:
+
+Listar chaves GPG: gpg --list-secret-keys --keyid-format=long
+
+Exportar chave pública GPG: gpg --armor --export "<key id>"
+
+Assinar com chave GPG: Após enviar a chave pública para o GitHub:
+
+Definir chave de assinatura: git config --global user.signingkey <your_gpg_key_id>
+
+Assinar commit específico: git commit -S -m "mensagem"
+
+Ativar assinatura automática: git config --global commit.gpgsign true
+
+Assinar com chave SSH: Após enviar a chave SSH para o GitHub:
+
+Definir formato de assinatura: git config --global gpg.format ssh
+
+Definir caminho da chave: git config --global user.signingkey <path_to_your_ssh_keys>
+
+Ativar assinatura automática: git config --global commit.gpgsign true
+
+
+######## COMANDOS ########
+
+Inicializar repositório local: git init
+
+Verificar status: git status
+
+Adicionar ao stage: git add . ou git add name-of-file (para desfazer: git reset name-of-file)
+
+Fazer commit: git commit -m "mensagem"
+
+Exemplos:
+
+git commit -m "feat(api): implement JWT-based authentication"
+
+git commit -m "fix(auth): correct token expiration time"
+
+git commit -m "refactor: simplify login flow logic"
+
+Vincular repositório remoto: git remote add origin git@github.com:your-github-username/name-of-repo.git
+
+Enviar para o GitHub (Push): git push -u origin main
+
+Puxar atualizações (Pull): git pull
+
+
+####### CÓPIAS DE OUTROS REPOS #######
+
+Fork (Bifurcação): Criar uma cópia de um repositório de terceiros no seu GitHub para poder modificá-lo quando não se tem acesso direto de escrita.
+
+Clonar o Fork: Baixar a cópia para o computador local usando SSH ou GitHub CLI.
+
+Adicionar o repositório original (Upstream): Configurar o repositório original como um remote secundário para conseguir receber atualizações futuras.
+
+Comando: git remote add upstream git@github.com:original-repo-username/repo-name.git.
+
+Verificar remotes configurados: git remote -v.
+
+Sincronizar atualizações: Puxar as novidades do projeto original para o seu fork local usando git fetch upstream e git merge upstream/main
+
+
+####### BRANCHES #######
+
+O que são branches (Ramos): Desvios da história principal (main) que permitem testar novas funcionalidades ou correções isoladamente sem quebrar o código principal.
+
+Visualizar branches: git branch (o asterisco * indica a branch atual).
+
+Criar branch: git branch feature.
+
+Mudar de branch: git checkout feature ou git switch feature.
+
+Criar e mudar de uma vez: git checkout -b feature ou git switch -c feature.
+
+Commitar na nova branch:
+
+Adicionar arquivo: git add feature.md
+
+Fazer commit: git commit -m "my new feature"
+
+Enviar branch para o repositório remoto: git push -u origin feature
+
+
+####### PULL REQUEST #######
+
+O que é um Pull Request (PR): Uma solicitação para mesclar as alterações de uma branch (head) para a branch de destino (base, como a main), permitindo revisão de código, comentários e testes antes da mesclagem.
+
+Como criar um PR no GitHub:
+
+Vá até a aba Pull Requests do repositório e clique em New Pull Request.
+
+Defina a branch de destino em base e a sua branch com as alterações em compare.
+
+Preencha o título e a descrição (seguindo eventuais templates do projeto) e clique em Create pull request.
+
+Atualização do repositório local após o merge:
+
+Voltar para a branch principal: git checkout main
+
+Puxar as atualizações da nuvem: git pull
+
+
+####### REVISÃO DO CÓDIGO #######
+
+Etapas da Revisão de Código (Code Review):
+
+Verificação da CI (Continuous Integration): Confirma se o código segue os padrões de estilo e passa nos testes automáticos.
+
+Análise de código: Os mantenedores examinam as alterações feitas (diff) e podem tirar dúvidas ou sugerir melhorias.
+
+Testes locais: Os mantenedores baixam as alterações para testar a aplicação na prática.
+
+Aprovação e Merge: Após aprovado (alguns projetos exigem mais de uma aprovação), o PR é integrado ao projeto.
+
+Aplicação de Mudanças Solicitadas:
+
+Sugestões diretas do mantenedor podem ser aceitas individualmente ou em lote pelo GitHub.
+
+Mudanças complexas devem ser feitas localmente, commitadas na mesma branch e enviadas com git push.
+
+Dicas para uma boa revisão: Tenha paciência com os mantenedores, teste bem o código antes de enviar e siga estritamente as diretrizes de contribuição do projeto.
+
+
+####### BOAS PRÁTICAS #######
+
+O usuário pediu para continuar com os resumos com base no texto fornecido sobre boas práticas para manter-se sincronizado com repositórios remotos (upstream).
+
+Lembrando da diretriz de preferência do usuário: "Prefiro textos o mais resumidos possível... vá direto ao ponto na resposta, sem explicar muito, a não ser que eu peça explicação. Responda somente o que eu perguntar."
+
+Resumo das boas práticas para sincronização com o repositório remoto (upstream):
+
+Manter o repositório local atualizado: Use git checkout main, depois git fetch upstream para baixar as alterações e git merge upstream/main para mesclá-las.
+
+Evitar desvios de histórico (divergent history): O uso correto de branches isoladas e comandos de fetch e merge evita conflitos complexos no main.
+
+Reset de emergência (se necessário): Se houver conflitos irreversíveis no histórico local (sem pull requests enviados), utilize git reset --hard upstream/main para forçar o alinhamento com a origem.
+
+Atualizar o fork remoto (origin): Envie as alterações sincronizadas para o seu fork com git push (ou git push --force caso tenha feito um reset forçado).
+
+
+####### gitignore #######
+
+O que é o .gitignore: Um arquivo especial que instrui o Git a parar de rastrear determinados arquivos ou pastas no projeto.
+
+O que incluir e por quê:
+
+Segredos: Arquivos com credenciais, chaves de API e chaves privadas (ex: .env, github.key), que nunca devem vazar, mesmo em repositórios privados.
+
+Dependências: Pastas pesadas de pacotes de terceiros (ex: node_modules), que são omitidas para não inflar o repositório, pois podem ser reinstaladas via gerenciadores usando o arquivo de configuração e o lockfile.
+
+Builds e Outputs: Arquivos gerados por compilação (ex: a pasta dist ou arquivos *.js gerados a partir de TypeScript).
+
+Arquivos de IDE: Pastas de configuração do ambiente de desenvolvimento local (ex: .vscode), podendo usar a sintaxe de negação (!) para exceções úteis, como o .vscode/settings.json.
+
+Arquivos de Sistema: Metadados gerados automaticamente pelo sistema operacional (ex: .DS_STORE no macOS e Thumbs.db no Windows).
+
+Arquivos já rastreados: Adicioná-los ao .gitignore não remove o histórico automaticamente; é preciso excluí-los fisicamente, commitar a exclusão e só então o Git passará a ignorá-los nas próximas criações.
+
+Templates oficiais: O GitHub disponibiliza modelos prontos de .gitignore para diferentes linguagens e frameworks em seu repositório oficial.
+
+
+####### Branches #######
+
+Por que criar branches: Manter a branch main sempre estável, testável e pronta para uso, além de isolar o trabalho de funcionalidades independentes e facilitar a depuração.
+
+Quando criar uma branch: Para cada unidade isolada de trabalho (ex: nova funcionalidade, correção de bug), partindo sempre da main para evitar histórico poluído.
+
+Convenções de nomenclatura:
+
+escopo/descrição (ex: feat/oauth-support).
+
+escopo/número-da-issue/descrição (ex: fix/25/password-auth).
+
+usuário/escopo/descrição (comum em repositórios privados internos).
+
+Estratégias avançadas:
+
+Evitar branches longas para prevenir conflitos massivos (usar feature flags se necessário).
+
+Manter branches dedicadas a ambientes ou releases (prod-staging, prod-current ou versões maiores) para correções pontuais e controle de deploy.
+
+Evitar mesclar branches via CLI local; utilizar Pull Requests (PRs) para validação de testes de CI e revisão visual do código (diff).
+
+
+####### CONFLITOS DE MERGE #######
+
+O que são conflitos de merge: Ocorrem quando branches diferentes modificam o mesmo arquivo e o Git não consegue definir automaticamente qual alteração manter.
+
+Resolução pelo GitHub: Utiliza a interface web com os marcadores de conflito (ex: <<<<<<< feat/conflict, =======, e >>>>>>> main), onde você escolhe o código desejado, clica em "Mark as resolved" e depois em "Commit merge".
+
+Resolução local via Merge: Feita com git merge origin/main, editando manualmente os marcadores no editor de código e finalizando com git add . e git commit -m "chore: resolve conflicts".
+
+Rebase: Realizado com git rebase -i main, reaplica os commits da sua branch sobre o estado mais recente de main. Conflitos são resolvidos com git add . e git rebase --continue.
+
+Squashing (Compactação): No rebase interativo, altera-se de pick para squash nos commits secundários para uni-los em um único commit limpo (ex: change three complete).
+
+
+####### CI e CD #######
+
+O que é CI/CD: Integração Contínua (CI) e Entrega/Implantação Contínua (CD). Automatizam testes, verificações e implantações do código.
+
+GitHub Actions: Ferramenta que usa executores temporários (runners) baseados em arquivos de configuração YAML.
+
+Disparadores (Triggers): Definidos pela chave on, acionam a execução de fluxos (workflows) em eventos como push ou pull_request na branch main.
+
+Estrutura de Jobs e Steps:
+
+Organizados em blocos de tarefas (jobs e steps) executados em ambientes isolados (ex: ubuntu-latest).
+
+Utilizam ações prontas (uses) para configuração de ambiente (como checkout de arquivos, Node.js e gerenciadores de pacotes) e comandos diretos (run) para instalar dependências, rodar linters, compilar builds e executar testes.
+
+Comportamento padrão: Se qualquer passo falhar, os seguintes são ignorados e a execução inteira é marcada como falha.
+
+Localização: Os arquivos YAML de configuração devem ser salvos na pasta .github/workflows do repositório.

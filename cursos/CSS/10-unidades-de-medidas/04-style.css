@@ -1,0 +1,6 @@
+div {
+  color: white;
+  background-color: #1b1b32;
+  width: calc(50% / 2);
+  height: calc(2em - 5px);
+}

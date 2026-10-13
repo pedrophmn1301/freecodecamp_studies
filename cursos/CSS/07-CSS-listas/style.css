@@ -1,0 +1,45 @@
+
+body{
+    background-color: bisque;
+}
+
+/* list-style-type - estiliza o indicador de cada item da lista */
+
+li{
+    background-color: aquamarine;
+}
+
+ol{
+    list-style-type: decimal-leading-zero;
+}
+
+ul{
+    list-style-type: georgian;
+}
+
+
+/* list-style-position - informa se marcador começa dentro ou fora do elemento*/
+
+.ordenada{          
+    list-style-position: outside;
+}
+
+.desordenada{
+    list-style-position: inside;
+}
+
+
+/* list-style-image - substitui o marcador por uma imagem*/
+
+
+#ordenada{
+    /* list-style-image: url('https://cdn.freecodecamp.org/platform/universal/freecodecamp-org-gravatar.jpeg');
+    list-style-position: inside;
+    list-style-type: decimal; */
+
+    /* OOOUUUU numa linha só*/
+
+    list-style: decimal inside url('https://cdn.freecodecamp.org/platform/universal/freecodecamp-org-gravatar.jpeg');
+
+}
+
