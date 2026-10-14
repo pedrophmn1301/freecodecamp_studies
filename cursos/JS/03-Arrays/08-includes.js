@@ -10,6 +10,6 @@ console.log(nums.includes("Cinco")); //false - case sensitive
 
 //Procura a partir de um índice
 
-console.log(nums.includes("sete",3)); //true
+console.log(nums.includes("sete",3)); //true a partir do 3
 
 console.log(nums.includes(2)); //false - 2 != "2"

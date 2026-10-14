@@ -29,3 +29,5 @@ Cole a chave
 
 -Testar conexão ssh -T git@github.com
 
+→Adicionar o arquivo .nojekyll na pasta de onde o site será executado é importante para que o deploy do github seja feito rápido.
+*esse arquivo deve ser criado quando o site ainda se resume em html, css e js.
