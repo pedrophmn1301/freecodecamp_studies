@@ -1,5 +1,12 @@
 ######## GITHUB ########
 
+Instalação no Windows:
+
+→winget install -e --id Git.Git
+
+########################
+
+
 → Git Hub - Controle de versão:
 
 Resumo dos pontos principais:

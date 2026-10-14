@@ -4,37 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links Projetos dos estudos</title>
+    <style>
+        .header{
+            background-color: #0A0A23;
+            min-width: 350px;
+            height: 150px;
+            display: flex;
+            align-items: center;        /*alinhamento horizontal*/
+            justify-content: center;    /*alinhamento vertical*/
+        }
+        .title img{
+            width: 300px;
+        }
+        .links{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .list{
+            width: 300px;
+        }
+        .item{
+            padding-left: 15px;
+            list-style: "→"; 
+            margin-bottom: 10px;
+        }
+        .link{
+            font-size: 35px;
+            font-weight: bolder;
+            text-decoration: none;
+            color: #0A0A23;
+        }
+        .link:hover{
+            color: aliceblue;
+            background-color: #0A0A23;
+            padding: 8px 0px 5px 0;
+        }
+    </style>
 </head>
 <body>
-    <ul>
-        <li>
-            <a href="./projects/CSS/01-cafeMenu/" target="_blank"></a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="./projects/CSS/03-to-do-list/" target="_blank"></a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="./projects/CSS/04-blogCard/" target="_blank"></a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="./projects/CSS/05-EventFlyerPage/" target="_blank"></a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="./projects/CSS/06-GreetingCard/" target="_blank"></a>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <a href="./projects/CSS/07-businessCard/" target="_blank"></a>
-        </li>
-    </ul>
+    <header class="header">
+        <h1 class="title">
+            <img src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" alt="freeCodeCamp">
+        </h1>
+    </header>
+    <div class="links">
+        <ul class="list">
+            <li class="item">
+                <a class="link" href="./projects/CSS/01-cafeMenu/" target="_blank">Cafe Menu</a>
+            </li>
+            <li class="item">
+                <a class="link" href="./projects/CSS/04-blogCard/" target="_blank">Blog Card</a>
+            </li>
+            <li class="item">
+                <a class="link" href="./projects/CSS/06-GreetingCard/" target="_blank">Greeting Card</a>
+            </li>
+            <li class="item">
+                <a class="link" href="./projects/CSS/07-businessCard/" target="_blank">Business Card</a>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
