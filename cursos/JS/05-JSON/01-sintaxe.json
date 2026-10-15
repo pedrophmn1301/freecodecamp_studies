@@ -1,0 +1,10 @@
+
+{
+    "name":"Pedro",
+    "age": 36,
+    "list of courses": [
+        "HTML",
+        "CSS",
+        "JS"
+    ]
+}
