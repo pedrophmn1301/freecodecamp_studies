@@ -47,8 +47,6 @@ function getRandomComputerChoice(choice){
 
 const choiseSelected = getRandomComputerChoice(questionSelect.choices)
 
-// console.log(getRandomComputerChoice(questions));
-
 function getResults(question,choice){
     if(choice === question.answer){
         return "The computer's choice is correct!";
