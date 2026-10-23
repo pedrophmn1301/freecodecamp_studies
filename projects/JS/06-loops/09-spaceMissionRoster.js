@@ -41,5 +41,9 @@ for (let i = 0; i < remainingCrew.length; i++) {
 // console.log(squad);
 
 function swapCrewMembers(crew,fromIndex,toIndex){
-    
+    if(fromIndex < 0 || fromIndex >= crew.length || toIndex < 0 || toIndex >= crew.length){
+        console.log("Invalid crew indices");
+        return;
+    }
+    const updatedCrew = crew.slice();
 }
